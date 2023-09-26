@@ -1,29 +1,18 @@
 <template>
-  <div class="flex flex-col items-center relative bg-gray-200">
-    <!-- google static map need a api key was not safe to use in a test project -->
-    <img class="w-screen" src="/images/fake_map.png" alt="">
-    <div class="bg-white flex flex-col items-center drop-shadow-sm py-3">
-      <div class="w-full px-9">
-        <BadgeGroup />
-        <DateTime />
-      </div>
-      <div class="w-full px-7">
-        <Alert />
-      </div>
-      <Customer />
-      <PickUpAddress />
-      <AddressInstructions />
-    </div>
-    <div class="bg-white mt-3 drop-shadow-sm pt-3">
-      <Devices />
-    </div>
-    <div class="bg-white mt-3 drop-shadow-sm">
-      <Payment />
-    </div>
-    <GlobalToast />      
+  <div class="flex flex-col items-center relative bg-gray-200 pb-20">
+    <Head>
+      <Title>Location Inspector</Title>
+      <Meta name="description" content="Location Inspector description"/>
+      <Meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+    </Head>
+    <RouterView />
+    <GlobalToast />
     <Navigator />
   </div>
 </template>
 
 <script setup lang="ts">
 </script>
+
+<style>
+</style>
